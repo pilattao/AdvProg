@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    <title>Aleksandrov DA ASM2105</title>
+</head>
+<body>
+<h1>Aleksandrov DA ASM2105</h1>
+<h3>Практическое задание к билету № 19 (АCМ-21-05)
+Вывести все возможные варианты перестановок строки символов, введённой в
+экранную форму.</h3>
+<form method="POST">
+    <input name="text">
+    <input type="submit" value="Permute">
+</form>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

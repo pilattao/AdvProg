@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <p> Number of acquired strings is {{ data|length }}:</p>
+    <div class="listbox-area">
+    <div class="left-area">
+    <h4>Permutation</h4>
+      <span id="ss_elem">
+      </span>
+      <ul id="ss_elem_list"
+        tabindex="0"
+        role="listbox"
+        aria-labelledby="ss_elem">
+          {% for item in data %}
+              <li id="ss_elem_Np" role="option">
+              <p> {{ item }} </p>
+              </li>
+          {% endfor %}
+      </ul>
+    </div>
+    <div class="right-area">
+    <h4>History</h4>
+      <span id="ss_elem">
+      </span>
+      <ul id="ss_elem_list"
+        tabindex="0"
+        role="listbox"
+        aria-labelledby="ss_elem">
+          {% for item in history %}
+              <li id="ss_elem_Np" role="option">
+              <p> {{ item }} </p>
+              </li>
+          {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}
